@@ -1,0 +1,27 @@
+package com.example.learing;
+
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class OrderDTO {
+    
+    private int numebr;
+    private String name;
+
+
+    public int getNumebr() {
+        return numebr;
+    }
+
+    public void setNumebr(int numebr) {
+        this.numebr = numebr;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}

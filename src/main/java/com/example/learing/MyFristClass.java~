@@ -1,0 +1,21 @@
+package com.example.learing;
+
+
+import org.springframework.stereotype.Component;
+
+
+public class MyFristClass {
+    private String myVar;
+
+    public MyFristClass(String myVar) {
+        this.myVar = myVar;
+    }
+
+    public MyFristClass (){
+        this.myVar = "abooood";
+    }
+
+    public String print(){
+        return "Heellloooo Abooooooooood is here!!!!!!!! ====> myVar = "+myVar;
+    }
+}

@@ -1,0 +1,29 @@
+package com.example.learing;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+@Service
+public class MyFirstService {
+
+    private  MyFristClass myFristClass;
+    @Value("application.properties.spring.application.name")
+    private String abood = "abdoo";
+
+    @Autowired
+    public void myInjection( MyFristClass myFristClass) {
+        this.myFristClass = myFristClass;
+    }
+
+    public String getAbood(){
+        return abood;
+    }
+
+    public String tellAstory(){
+        return  "The dependency is: "+myFristClass.print();
+    }
+
+
+}

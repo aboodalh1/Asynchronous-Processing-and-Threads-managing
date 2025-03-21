@@ -1,0 +1,28 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+
+@Configuration
+public class ApplicationConfig {
+
+    @Qualifier("d1")
+    @Bean
+    public MyFristClass myFristBean(){
+        return new MyFristClass("First Bean");
+    }
+
+    @Qualifier("d2")
+    public MyFristClass myFristClass1(){
+        return new MyFristClass("Second Bean");
+    }
+    @Qualifier("d3")
+    @Bean
+    @Primary
+    public MyFristClass myFristClass2(){
+        return new MyFristClass("Third Bean");
+    }
+
+}

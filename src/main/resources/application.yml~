@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5234/demo_db
+        username: abd
+        password: password
+        driver-class-name: org.postgresql.Driver
+        name: demo_db
+    jpa:
+      hibenate:
+        ddl-auto: create
+      show-sql: true
+      properties:
+        hibernate:
+          format_sql: true
+      database: postgresql
+
